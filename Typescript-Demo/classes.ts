@@ -1,3 +1,5 @@
+import { User, Login } from "./interface";
+
 // class Employee {
 //   id!: number;
 
@@ -16,7 +18,7 @@
 
 // Second method:
 
-class Employee {
+class Employee implements Login {
   #id: number;
   name: string;
   address: string;
@@ -36,6 +38,10 @@ class Employee {
     this.#id = id;
     this.name = name;
     this.address = address;
+  }
+
+  Login(): User {
+    return { name: "John", id: 1, email: "" };
   }
 
   getNameWithAddress(): string {
