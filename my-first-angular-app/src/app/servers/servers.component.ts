@@ -4,26 +4,26 @@ import { Component } from '@angular/core';
   selector: 'app-servers',
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css'],
+  styles: [
+    `
+      .fifth {
+        color: white;
+      }
+    `,
+  ],
 })
 export class ServersComponent {
-  allowNewServer = false;
-  serverCreationStatus = 'No Server was created!';
-  serverName = 'Test Server';
-  serverCreated = false;
-  servers = ['Test Server', 'Test Server 2'];
+  hiddenMessage = false;
+  clickCounter = 0;
+  counterArray: number[] = [];
 
-  constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
+  toggleMessage() {
+    this.hiddenMessage = this.hiddenMessage ? false : true;
+    this.clickCounter++;
+    this.counterArray.push(this.clickCounter);
   }
-  onCreateServer() {
-    this.serverCreated = true;
-    this.servers.push(this.serverName);
-    this.serverCreationStatus =
-      'The server was created! Name is ' + this.serverName;
-  }
-  onUpdateServerName(event: Event) {
-    this.serverName = (<HTMLInputElement>event.target).value;
+
+  getColor() {
+    return this.clickCounter >= 5 ? 'skyblue' : 'none';
   }
 }
