@@ -9,6 +9,9 @@
       <button class="btn btn-primary" (click)="OnChangeFirst()">
         Change first Element
       </button>
+      <button class="btn btn-danger" (click)="OnDestroyFirst()">
+        Destroy First Component
+      </button>
       <app-server-element
         *ngFor="let serverElement of serverElements"
         [srvElement]="serverElement"
