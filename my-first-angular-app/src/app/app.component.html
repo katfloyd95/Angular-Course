@@ -2,15 +2,25 @@
   <h1>Game Controller</h1>
   <hr />
   <div class="row">
-    <app-game-control></app-game-control>
+    <app-game-control
+      (intervalFired)="onIntervalFired($event)"
+    ></app-game-control>
   </div>
   <hr />
   <div class="row">
     <div class="col-sm">
-      <app-odd></app-odd>
+      <h3>Odd Outputs</h3>
+      <app-odd
+        *ngFor="let oddNumber of oddNumbers"
+        [number]="oddNumber"
+      ></app-odd>
     </div>
     <div class="col-sm">
-      <app-even></app-even>
+      <h3>Even Outputs</h3>
+      <app-even
+        *ngFor="let evenNumber of evenNumbers"
+        [number]="evenNumber"
+      ></app-even>
     </div>
   </div>
 </div>
