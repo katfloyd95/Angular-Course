@@ -6,16 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  oddNumbers: number[] = [];
-  evenNumbers: number[] = [];
-
-  onIntervalFired(firedNumber: number) {
-    if (firedNumber % 2 !== 0) {
-      this.oddNumbers.push(firedNumber);
-      console.log('Odd:', this.oddNumbers);
-    } else {
-      this.evenNumbers.push(firedNumber);
-      console.log('Even:', this.evenNumbers);
-    }
-  }
+  numbers: number[] = [1,2,3,4,5];
+  onlyOdd: boolean = false;
 }
