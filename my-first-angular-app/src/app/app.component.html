@@ -10,12 +10,16 @@
         <div *ngIf="onlyOdd" >
           <li
             class="list-group-item"
+            [ngClass]="{odd: oddNumber % 2 !== 0}"
+            [ngStyle]="{backgroundColor: oddNumber % 2 !== 0 ? 'yellow' : 'transparent'}"
             *ngFor="let oddNumber of oddNumbers"
           >{{oddNumber}}</li>
         </div>
         <div *ngIf="!onlyOdd" >
           <li
             class="list-group-item"
+            [ngClass]="{even: evenNumber % 2 === 0}"
+            [ngStyle]="{backgroundColor: evenNumber % 2 === 0 ? 'lightblue' : 'transparent'}"
             *ngFor="let evenNumber of evenNumbers"
           >{{evenNumber}}</li>
         </div>
