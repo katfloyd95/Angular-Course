@@ -18,13 +18,14 @@
         <div *ngIf="!onlyOdd" >
           <li
             class="list-group-item"
-            [ngClass]="{even: evenNumber % 2 === 0}"
+            [ngClass]="{odd: evenNumber % 2 !== 0}"
             [ngStyle]="{backgroundColor: evenNumber % 2 === 0 ? 'lightblue' : 'transparent'}"
             *ngFor="let evenNumber of evenNumbers"
           >{{evenNumber}}</li>
         </div>
       </ul>
       <p appBasicHighlight>Style me with basic directive!</p>
+      <p appBetterHighlight>Style me with the better directive!</p>
     </div>
   </div>
 </div>
