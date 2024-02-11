@@ -1,18 +1,27 @@
 import {Recipe} from "./recipe-list/recipe.model";
 import {EventEmitter} from "@angular/core";
+import {Ingredient} from "../shared/ingredient.model";
 
 export class RecipesService {
   recipeSelected = new EventEmitter<Recipe>();
   private recipes: Recipe[] = [
     new Recipe(
-      'Test Recipe',
-      'This is simply a test',
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg'
+      'Tasty Schnitzel',
+      'A super tasty Schnitzel',
+      'https://upload.wikipedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+      [
+        new Ingredient('meat', 1),
+        new Ingredient('french fries', 20)
+      ]
     ),
     new Recipe(
-      'Another Test Recipe',
-      'This is simply a test',
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg'
+      'Big Fat Burger',
+      'What else do you need to say?',
+      'https://upload.wikipedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+      [
+        new Ingredient('Bun', 2),
+        new Ingredient('Meat', 1)
+      ]
     ),
   ];
 
