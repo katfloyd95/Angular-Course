@@ -8,7 +8,7 @@ export class RecipesService {
     new Recipe(
       'Tasty Schnitzel',
       'A super tasty Schnitzel',
-      'https://upload.wikipedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/a/ae/Wiener-Schnitzel02.jpg',
       [
         new Ingredient('meat', 1),
         new Ingredient('french fries', 20)
@@ -17,7 +17,7 @@ export class RecipesService {
     new Recipe(
       'Big Fat Burger',
       'What else do you need to say?',
-      'https://upload.wikipedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b8/Five_Guys_Burgers_and_Fries_%287025300923%29.jpg',
       [
         new Ingredient('Bun', 2),
         new Ingredient('Meat', 1)
